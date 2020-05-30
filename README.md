@@ -1,5 +1,5 @@
 # la-mulana-web-tracker
-A web-based tracker for La Mulana Randomizer.
+A web-based tracker for La Mulana Randomizer by ZoeVermilion.
 
 Lots of code adapted from allibear17's Legend of Zelda Location Tracker (https://github.com/allibear17/Legend-of-Zelda-Location-Tracker)
 
