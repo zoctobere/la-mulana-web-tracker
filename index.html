@@ -14,116 +14,151 @@
 	<button onclick="showSection(3)" type="button" style= "background-color:#00a800">5 & 6</button>
 	<button onclick="showSection(4)" type="button" style= "background-color:#005000">7 & 8</button>
 	<button onclick="showSection(5)" type="button" style= "background-color:#747474">Lv 9</button> -->
-	<table id="exploration"><tr>
-			<td><img id="hboots" class="item" src="sprites/hboots.png" onClick="toggleItem(event)" title="Hermes' Boots"></td>
-			<td><img id="grappleclaw" class="item" src="sprites/grappleclaw.png" onClick="toggleItem(event)" title="Grapple Claw"></td>
-			<td><img id="feather" class="item" src="sprites/feather.png" onClick="toggleItem(event)" title="Feather"></td>
-			<td><img id="handscan" class="item" src="sprites/handscan.png" onClick="toggleItem(event)" title="Hand Scanner"></td>
-			<td><img id="reader" class="item" src="sprites/reader.png" onClick="toggleItem(event)" title="reader.exe"></td>
-			<td><img id="grail" class="item" src="sprites/grail.png" onClick="toggleItem(event)" title="Holy Grail"></td>
-			<td><img id="mirai" class="item" src="sprites/mirai.png" onClick="toggleItem(event)" title="mirai.exe"></td>
+	<table id="layout">
+		<tr>
+			<td>
+				<table id="left_pane">
+					<tr>
+						<th colspan="5">MAIN WEAPON</th>
+					</tr><tr>
+						<td><img id="whip" class="item" src="sprites/whip1.png" onClick="stepItem(event, &quot;sprites/whip1.png&quot;, &quot;sprites/whip2.png&quot;, &quot;sprites/whip3.png&quot;)" oncontextmenu="unStepItem(event, &quot;sprites/whip1.png&quot;, &quot;sprites/whip2.png&quot;, &quot;sprites/whip3.png&quot;);return false;" title="Whip"></td>
+						<td><img id="knife" class="item" src="sprites/knife.png" onClick="toggleItem(event)" title="Knife"></td>
+						<td><img id="ksword" class="item" src="sprites/ksword.png" onClick="toggleItem(event)" title="Key Sword"></td>
+						<td><img id="axe" class="item" src="sprites/axe.png" onClick="toggleItem(event)" title="Axe"></td>
+						<td><img id="katana" class="item" src="sprites/katana.png" onClick="toggleItem(event)" title="Katana"></td>
+					</tr><tr>
+						<th colspan="5">SUB WEAPON</th>
+					</tr><tr>
+						<td><img id="shuriken" class="item" src="sprites/shuriken.png" onClick="toggleItem(event)" title="Shuriken"></td>
+						<td><img id="rshuriken" class="item" src="sprites/rshuriken.png" onClick="toggleItem(event)" title="Rolling Shuriken"></td>
+						<td><img id="espear" class="item" src="sprites/earthspear.png" onClick="toggleItem(event)" title="Earth Spear"></td>
+						<td><img id="flaregun" class="item" src="sprites/flaregun.png" onClick="toggleItem(event)" title="Flare Gun"></td>
+						<td><img id="bomb" class="item" src="sprites/bomb.png" onClick="toggleItem(event)" title="Bomb"></td>
+					</tr><tr>
+						<td><img id="chakram" class="item" src="sprites/chakram.png" onClick="toggleItem(event)" title="Chakram"></td>
+						<td><img id="caltrops" class="item" src="sprites/caltrops.png" onClick="toggleItem(event)" title="Caltrops"></td>
+						<td><img id="pistol" class="item" src="sprites/pistol.png" onClick="toggleItem(event)" title="Pistol"></td>
+						<td><img id="shield" class="item" src="sprites/buckler.png" onClick="stepItem(event, &quot;sprites/buckler.png&quot;, &quot;sprites/silvershield.png&quot;, &quot;sprites/ashield.png&quot;) "oncontextmenu="unStepItem(event, &quot;sprites/buckler.png&quot;, &quot;sprites/silvershield.png&quot;, &quot;sprites/ashield.png&quot;);return false;" itle="Shield"></td>
+						<td></td>
+					</tr><tr>
+						<th colspan="5">USABLE ITEMS</th>
+					</tr><tr>
+						<td><img id="handscan" class="item" src="sprites/handscan.png" onClick="toggleItem(event)" title="Hand Scanner"></td>
+						<td><img id="djedpillar" class="item" src="sprites/djed.png" onClick="toggleItem(event)" title="Djed Pillar"></td>
+						<td><img id="minidoll" class="item" src="sprites/minidoll.png" onClick="toggleItem(event)" title="Mini Doll"></td>
+						<td><img id="megatama" class="item" src="sprites/megatama.png" onClick="toggleItem(event)" title="Jade Magatama"></td>
+						<td><img id="soulcog" class="item" src="sprites/soulcog.png" onClick="toggleItem(event)" title="Cog of the Soul"></td>
+					</tr><tr>
+						<td><img id="timelamp" class="item" src="sprites/timelamp.png" onClick="toggleItem(event)" title="Lamp of Time"></td>
+						<td><img id="pochette" class="item" src="sprites/pochettekey.png" onClick="toggleItem(event)" title="Pochette Key"></td>
+						<td><img id="dragonbone" class="item" src="sprites/dragonbone.png" onClick="toggleItem(event)" title="Dragon Bone"></td>
+						<td><img id="cskull" class="item" src="sprites/cskull.png" onClick="toggleItem(event)" title="Crystal Skull"></td>
+						<td><img id="vessel" class="item" src="sprites/vessel.png" onClick="stepItem(event, &quot;sprites/vessel.png&quot;, &quot;sprites/medicine.png&quot;, &quot;dummy&quot;)" oncontextmenu="unStepItem(event, &quot;sprites/vessel.png&quot;, &quot;sprites/medicine.png&quot;, &quot;dummy&quot;);return false;" title="Vessel"></td>
+					</tr><tr>
+						<td><img id="pepper" class="item" src="sprites/pepper.png" onClick="stepItem(event, &quot;sprites/pepper.png&quot;, &quot;sprites/treasures.png&quot;, &quot;sprites/anchor.png&quot;)" oncontextmenu="unStepItem(event, &quot;sprites/pepper.png&quot;, &quot;sprites/treasures.png&quot;, &quot;sprites/anchor.png&quot;);return false;" title="Anchor"></td>
+						<td><img id="wmstatue" class="item" src="sprites/wmstatue.png" onClick="toggleItem(event)" title="Woman Statue/Maternity Statue"></td>
+						<td><img id="eternitykey" class="item" src="sprites/eternitykey.png" onClick="toggleItem(event)" title="Key of Eternity"></td>
+						<td><img id="sstaff" class="item" src="sprites/sstaff.png" onClick="toggleItem(event)" title="Serpent Staff"></td>
+						<td></td>
+					</tr><tr>
+						<th colspan="5">SOFTWARE</th>
+					</tr><tr>
+					</tr><tr>
+						<td><img id="reader" class="item" src="sprites/reader.png" onClick="toggleItem(event)" title="reader.exe"></td>
+						<td><img id="yagomap" class="item" src="sprites/yagomap.png" onClick="toggleItem(event)" title="yagomap.exe"></td>
+						<td><img id="yagostr" class="item" src="sprites/yagostr.png" onClick="toggleItem(event)" title="yagostr.exe"></td>
+						<td><img id="torude" class="item" src="sprites/torude.png" onClick="toggleItem(event)" title="torude.exe"></td>
+						<td><img id="mantra" class="item" src="sprites/mantra.png" onClick="toggleItem(event)" title="mantra.exe"></td>
+					</tr><tr>
+						<td><img id="mekuri" class="item" src="sprites/mekuri.png" onClick="toggleItem(event)" title="mekuri.exe"></td>
+						<td><img id="miracle" class="item" src="sprites/miracle.png" onClick="toggleItem(event)" title="miracle.exe"></td>
+						<td><img id="mirai" class="item" src="sprites/mirai.png" onClick="toggleItem(event)" title="mirai.exe"></td>
+						<td></td>
+						<td><img id="keyfairy" class="item" src="sprites/keyfairy.png" title="Consistent Key Fairy Access"></td>
+					</tr>
+				</table>
+			</td>
+			<td>
+				<table id="right_pane">
+					</tr><tr>
+						<th colspan="5">ITEMS</th>
+					</tr><tr>
+					<tr>
+						<td><img id="superx2" class="item" src="sprites/superx2.png" onClick="toggleItem(event)" title="Moble Super X2"></td>
+						<td><img id="shrinechecks" class="item" src="sprites/shrine.png" title="Remove Walls from Shrine of the Mother"</td>
+						<td><img id="shrinemap" class="item" src="sprites/map.png" onClick="toggleItem(event)" title="Map (Shrine of the Mother)"></td>
+						<td></td>
+						<td><img id="glove" class="item" src="sprites/glove.png" onClick="toggleItem(event)" title="Glove"></td>
+					</tr><tr>
+						<td><img id="grail" class="item" src="sprites/grail.png" onClick="toggleItem(event)" title="Holy Grail"></td>
+						<td><img id="isispendant" class="item" src="sprites/isipendant.png" onClick="toggleItem(event)" title="Isis' Pendant"></td>
+						<td><img id="crucifix" class="item" src="sprites/crucifix.png" onClick="toggleItem(event)" title="Crucifix"></td>
+						<td><img id="helmet" class="item" src="sprites/helmet.png" onClick="toggleItem(event)" title="Helmet"></td>
+						<td><img id="grappleclaw" class="item" src="sprites/grappleclaw.png" onClick="toggleItem(event)" title="Grapple Claw"></td>
+					</tr><tr>
+						<td><img id="bmirror" class="item" src="sprites/bmirror.png" onClick="toggleItem(event)" title="Bronze Mirror"></td>
+						<td><img id="trutheye" class="item" src="sprites/trutheye.png" onClick="toggleItem(event)" title="Eye of Truth"></td>
+						<td><img id="scalesphere" class="item" src="sprites/scalesphere.png" onClick="toggleItem(event)" title="Scalesphere"></td>
+						<td><img id="ring" class="item" src="sprites/ring.png" onClick="toggleItem(event)" title="Ring"></td>
+						<td><img id="gauntlet" class="item" src="sprites/gauntlet.png" onClick="toggleItem(event)" title="Gauntlet"></td>
+					</tr><tr>
+						<td><img id="anchor" class="item" src="sprites/anchor.png" onClick="toggleItem(event)" title="Anchor"></td>
+						<td><img id="plane" class="item" src="sprites/plane.png" onClick="toggleItem(event)" title="Golden Plane"></td>
+						<td><img id="ocarina" class="item" src="sprites/ocarina.png" onClick="toggleItem(event)" title="Philospher's Ocarina"></td>
+						<td><img id="feather" class="item" src="sprites/feather.png" onClick="toggleItem(event)" title="Feather"></td>
+						<td><img id="bookdead" class="item" src="sprites/bookdead.png" onClick="toggleItem(event)" title="Book of the Dead"></td>
+					</tr><tr>
+						<td><img id="fclothes" class="item" src="sprites/fclothes.png" onClick="toggleItem(event)" title="Fairy Clothes"></td>
+						<td><img id="scriptures" class="item" src="sprites/scriptures.png" onClick="toggleItem(event)" title="Scriptures"></td>
+						<td><img id="hboots" class="item" src="sprites/hboots.png" onClick="toggleItem(event)" title="Hermes' Boots"></td>
+						<td><img id="edenfruit" class="item" src="sprites/edenfruit.png" onClick="toggleItem(event)" title="Fruit of Eden"></td>
+						<td><img id="twinstatue" class="item" src="sprites/twinstatue.png" onClick="toggleItem(event)" title="Twin Statue"></td>
+					</tr><tr>
+						<td><img id="bracelet" class="item" src="sprites/bracelet.png" onClick="toggleItem(event)" title="Bracelet"></td>
+						<td><img id="perfume" class="item" src="sprites/perfume.png" onClick="toggleItem(event)" title="Perfume"></td>
+						<td><img id="spaulder" class="item" src="sprites/spaulder.png" onClick="toggleItem(event)" title="Spaulder"></td>
+						<td><img id="dimenkey" class="item" src="sprites/dimenkey.png" onClick="toggleItem(event)" title="Dimensional Key"></td>
+						<td><img id="icecape" class="item" src="sprites/icecape.png" onClick="toggleItem(event)" title="Ice Cape"></td>
+					</tr><tr>
+						<th colspan="4">SEALS</th>
+					</tr><tr>
+						<td><img id="sealorigin" class="item" src="sprites/sealorigin.png" onClick="toggleItem(event)" title="Origin Seal"></td>
+						<td><img id="sealbirth" class="item" src="sprites/sealbirth.png" onClick="toggleItem(event)" title="Birth Seal"></td>
+						<td><img id="seallife" class="item" src="sprites/seallife.png" onClick="toggleItem(event)" title="Life Seal"></td>
+						<td><img id="sealdeath" class="item" src="sprites/sealdeath.png" onClick="toggleItem(event)" title="Death Seal"></td>
+					</tr><tr>
+						<th colspan="4">COLLECTABLES</th>
+					</tr><tr>
+						<td><div class="container"><img id="map" class="item" src="sprites/map.png" onClick="incCounter(event, 17, &quot;mapCounter&quot;)" oncontextmenu="decCounter(event, 17, &quot;mapCounter&quot;);return false;" title="Maps"><div class="overlay" id="mapCounter">0</div></div></td>
+						<td><div class="container"><img id="ankh" class="item" src="sprites/ankh.png" onClick="incCounter(event, 9, &quot;ankhCounter&quot;)" oncontextmenu="decCounter(event, 9, &quot;ankhCounter&quot;);return false;" title="Ankh Jewels"><div class="overlay" id="ankhCounter">0</div></div></td>
+						<td><div class="container"><img id="orb" class="item" src="sprites/orb.png" onClick="incCounter(event, 10, &quot;orbCounter&quot;)" oncontextmenu="decCounter(event, 10, &quot;orbCounter&quot;);return false;" title="Sacred Orbs"><div class="overlay" id="orbCounter">0</div></div></td>
+					</tr>
+				</table>
+			</td><td>
+				<table id="bosses">
+					<tr>
+						<th>BOSS</th>
+					</tr><tr>
+						<td width=28px height=28px><img id="amphisbaena" class="item" src="sprites/Amphi.png" onClick="toggleItem(event)" title="Amphisbaena"></td>
+					<tr></tr>
+						<td width=28px height=28px><img id="sakit" class="item" src="sprites/Sakit.png" onClick="toggleItem(event)" title="Sakit"></td>
+					<tr></tr>
+						<td width=28px height=28px><img id="ellmac" class="item" src="sprites/ellmac.png" onClick="toggleItem(event)" title="Ellmac"></td>
+					<tr></tr>
+						<td width=28px height=28px><img id="bahamut" class="item" src="sprites/bahamut.png" onClick="toggleItem(event)" title="Bahamut"></td>
+					<tr></tr>
+						<td width=28px height=28px><img id="viy" class="item" src="sprites/Viy.png" onClick="toggleItem(event)" title="Viy"></td>
+					<tr></tr>
+						<td width=28px height=28px><img id="palenque" class="item" src="sprites/Palenque.png" onClick="toggleItem(event)" title="Palenque"></td>
+					<tr></tr>
+						<td width=28px height=28px><img id="baphomet" class="item" src="sprites/baphomet.png" onClick="toggleItem(event)" title="Baphomet"></td>
+					<tr></tr>
+						<td width=28px height=28px><img id="tiamat" class="item" src="sprites/tiamat.png" onClick="toggleItem(event)" title="Tiamat"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
 	</table>
-	<table id="items"><tr>
-	  </tr><tr>
-			<td><img id="eternitykey" class="item" src="sprites/eternitykey.png" onClick="toggleItem(event)" title="Key of Eternity"></td>
-			<td><img id="cskull" class="item" src="sprites/cskull.png" onClick="toggleItem(event)" title="Crystal Skull"></td>
-			<td><img id="pochette" class="item" src="sprites/pochettekey.png" onClick="toggleItem(event)" title="Pochette Key"></td>
-			<td><img id="soulcog" class="item" src="sprites/soulcog.png" onClick="toggleItem(event)" title="Cog of the Soul"></td>
-			<td><img id="sstaff" class="item" src="sprites/sstaff.png" onClick="toggleItem(event)" title="Serpent Staff"></td>
-			<td><img id="wmstatue" class="item" src="sprites/wmstatue.png" onClick="toggleItem(event)" title="Woman Statue/Maternity Statue"></td>
-			<td><img id="djedpillar" class="item" src="sprites/djed.png" onClick="toggleItem(event)" title="Djed Pillar"></td>
-		</tr><tr>
-			<td><img id="pepper" class="item" src="sprites/pepper.png" onClick="toggleItem(event)" title="Pepper"></td>
-			<td><img id="minidoll" class="item" src="sprites/minidoll.png" onClick="toggleItem(event)" title="Mini Doll"></td>
-			<td><img id="megatama" class="item" src="sprites/megatama.png" onClick="toggleItem(event)" title="Jade Magatama"></td>
-			<td><img id="talisman" class="item" src="sprites/talisman.png" onClick="toggleItem(event)" title="Talisman"></td>
-			<td><img id="diary" class="item" src="sprites/diary.png" onClick="toggleItem(event)" title="Diary"></td>
-			<td><img id="mtalisman" class="item" src="sprites/mtalisman.png" onClick="toggleItem(event)" title="Mulana Talisman"></td>
-			<td><img id="timelamp" class="item" src="sprites/timelamp.png" onClick="toggleItem(event)" title="Lamp of Time"></td>
-		</tr><tr>
-			<td><img id="bmirror" class="item" src="sprites/bmirror.png" onClick="toggleItem(event)" title="Bronze Mirror"></td>
-			<td><img id="edenfruit" class="item" src="sprites/edenfruit.png" onClick="toggleItem(event)" title="Fruit of Eden"></td>
-			<td><img id="twinstatue" class="item" src="sprites/twinstatue.png" onClick="toggleItem(event)" title="Twin Statue"></td>
-			<td><img id="dimenkey" class="item" src="sprites/dimenkey.png" onClick="toggleItem(event)" title="Dimensional Key"></td>
-			<td><img id="icecape" class="item" src="sprites/icecape.png" onClick="toggleItem(event)" title="Ice Cape"></td>
-			<td><img id="scalesphere" class="item" src="sprites/scalesphere.png" onClick="toggleItem(event)" title="Scalesphere"></td>
-			<td><img id="helmet" class="item" src="sprites/helmet.png" onClick="toggleItem(event)" title="Helmet"></td>
-		</tr><tr>
-			<td><img id="anchor" class="item" src="sprites/anchor.png" onClick="toggleItem(event)" title="Anchor"></td>
-			<td><img id="plane" class="item" src="sprites/plane.png" onClick="toggleItem(event)" title="Golden Plane"></td>
-			<td><img id="trutheye" class="item" src="sprites/trutheye.png" onClick="toggleItem(event)" title="Eye of Truth"></td>
-			<td><img id="torude" class="item" src="sprites/torude.png" onClick="toggleItem(event)" title="torude.exe"></td>
-			<td><img id="treasures" class="item" src="sprites/treasures.png" onClick="toggleItem(event)" title="Treasures"></td>
-			<td><img id="keyfairy" class="item" src="sprites/keyfairy.png" title="Consistent Key Fairy Access"></td>
-			<td><img id="shrinechecks" class="item" src="sprites/shrine.png" title="Remove Walls from Shrine of the Mother"</td>
-		</tr><tr>
-	</table>
-	<table id="bone_and _fairy"><tr>
-			<td><img id="dragonbone" class="item" src="sprites/dragonbone.png" onClick="toggleItem(event)" title="Dragon Bone"></td>
-			<td><img id="yagomap" class="item" src="sprites/yagomap.png" onClick="toggleItem(event)" title="yagomap.exe"></td>
-			<td><img id="yagostr" class="item" src="sprites/yagostr.png" onClick="toggleItem(event)" title="yagostr.exe"></td>
-			<td><img id="shrinemap" class="item" src="sprites/map.png" onClick="toggleItem(event)" title="Map (Shrine of the Mother)"></td>
-			<td><img id="isispendant" class="item" src="sprites/isipendant.png" onClick="toggleItem(event)" title="Isis' Pendant"></td>
-			<td><img id="miracle" class="item" src="sprites/miracle.png" onClick="toggleItem(event)" title="miracle.exe"></td>
-			<td><img id="mekuri" class="item" src="sprites/mekuri.png" onClick="toggleItem(event)" title="mekuri.exe"></td>
-		</tr><tr>
-	</table>
-	<table id="misc"><tr>
-			<td><img id="sealorigin" class="item" src="sprites/sealorigin.png" onClick="toggleItem(event)" title="Origin Seal"></td>
-			<td><img id="sealbirth" class="item" src="sprites/sealbirth.png" onClick="toggleItem(event)" title="Birth Seal"></td>
-			<td><img id="seallife" class="item" src="sprites/seallife.png" onClick="toggleItem(event)" title="Life Seal"></td>
-			<td><img id="sealdeath" class="item" src="sprites/sealdeath.png" onClick="toggleItem(event)" title="Death Seal"></td>
-			<td><img id="superx2" class="item" src="sprites/superx2.png" onClick="toggleItem(event)" title="Moble Super X2"></td>
-			<td><img id="bookdead" class="item" src="sprites/bookdead.png" onClick="toggleItem(event)" title="Book of the Dead"></td>
-			<td><img id="fclothes" class="item" src="sprites/fclothes.png" onClick="toggleItem(event)" title="Fairy Clothes"></td>
-		</tr><tr>
-			<td><img id="scriptures" class="item" src="sprites/scriptures.png" onClick="toggleItem(event)" title="Scriptures"></td>
-			<td><img id="crucifix" class="item" src="sprites/crucifix.png" onClick="toggleItem(event)" title="Crucifix"></td>
-			<td><img id="perfume" class="item" src="sprites/perfume.png" onClick="toggleItem(event)" title="Perfume"></td>
-			<td><img id="glove" class="item" src="sprites/glove.png" onClick="toggleItem(event)" title="Glove"></td>
-			<td><img id="bracelet" class="item" src="sprites/bracelet.png" onClick="toggleItem(event)" title="Bracelet"></td>
-			<td><img id="ring" class="item" src="sprites/ring.png" onClick="toggleItem(event)" title="Ring"></td>
-			<td><img id="spaulder" class="item" src="sprites/spaulder.png" onClick="toggleItem(event)" title="Spaulder"></td>
-		</tr><tr>
-	</table>
-	<table id="weapons"><tr>
-			<td><img id="whip" class="item" src="sprites/whip1.png" onClick="stepItem(event, &quot;sprites/whip1.png&quot;, &quot;sprites/whip2.png&quot;, &quot;sprites/whip3.png&quot;)" oncontextmenu="unStepItem(event, &quot;sprites/whip1.png&quot;, &quot;sprites/whip2.png&quot;, &quot;sprites/whip3.png&quot;);return false;" title="Whip"></td>
-			<td><img id="knife" class="item" src="sprites/knife.png" onClick="toggleItem(event)" title="Knife"></td>
-			<td><img id="axe" class="item" src="sprites/axe.png" onClick="toggleItem(event)" title="Axe"></td>
-			<td><img id="katana" class="item" src="sprites/katana.png" onClick="toggleItem(event)" title="Katana"></td>
-			<td><img id="shield" class="item" src="sprites/buckler.png" onClick="stepItem(event, &quot;sprites/buckler.png&quot;, &quot;sprites/silvershield.png&quot;, &quot;sprites/ashield.png&quot;) "oncontextmenu="unStepItem(event, &quot;sprites/buckler.png&quot;, &quot;sprites/silvershield.png&quot;, &quot;sprites/ashield.png&quot;);return false;" itle="Shield"></td>
-			<td><img id="gauntlet" class="item" src="sprites/gauntlet.png" onClick="toggleItem(event)" title="Gauntlet"></td>
-			<td><img id="pistol" class="item" src="sprites/pistol.png" onClick="toggleItem(event)" title="Pistol"></td>
-		</tr><tr>
-			<td><img id="shuriken" class="item" src="sprites/shuriken.png" onClick="toggleItem(event)" title="Shuriken"></td>
-			<td><img id="rshuriken" class="item" src="sprites/rshuriken.png" onClick="toggleItem(event)" title="Rolling Shuriken"></td>
-			<td><img id="caltrops" class="item" src="sprites/caltrops.png" onClick="toggleItem(event)" title="Caltrops"></td>
-			<td><img id="flaregun" class="item" src="sprites/flaregun.png" onClick="toggleItem(event)" title="Flare Gun"></td>
-			<td><img id="chakram" class="item" src="sprites/chakram.png" onClick="toggleItem(event)" title="Chakram"></td>
-			<td><img id="espear" class="item" src="sprites/earthspear.png" onClick="toggleItem(event)" title="Earth Spear"></td>
-			<td><img id="bomb" class="item" src="sprites/bomb.png" onClick="toggleItem(event)" title="Bomb"></td>
-		</tr><tr>
-		</table>
-		<table id="other_misc"><tr>
-			<td><img id="ocarina" class="item" src="sprites/ocarina.png" onClick="toggleItem(event)" title="Philospher's Ocarina"></td>
-			<td><img id="mantra" class="item" src="sprites/mantra.png" onClick="toggleItem(event)" title="mantra.exe"></td>
-			<td><img id="vessel" class="item" src="sprites/vessel.png" onClick="stepItem(event, &quot;sprites/vessel.png&quot;, &quot;sprites/medicine.png&quot;, &quot;dummy&quot;)" oncontextmenu="unStepItem(event, &quot;sprites/vessel.png&quot;, &quot;sprites/medicine.png&quot;, &quot;dummy&quot;);return false;" title="Vessel"></td>
-			<td><img id="ksword" class="item" src="sprites/ksword.png" onClick="toggleItem(event)" title="Key Sword"></td>
-			<td><div class="container"><img id="map" class="item" src="sprites/map.png" onClick="incCounter(event, 17, &quot;mapCounter&quot;)" oncontextmenu="decCounter(event, 17, &quot;mapCounter&quot;);return false;" title="Maps"><div class="overlay" id="mapCounter">0</div></div></td>
-			<td><div class="container"><img id="ankh" class="item" src="sprites/ankh.png" onClick="incCounter(event, 9, &quot;ankhCounter&quot;)" oncontextmenu="decCounter(event, 9, &quot;ankhCounter&quot;);return false;" title="Ankh Jewels"><div class="overlay" id="ankhCounter">0</div></div></td>
-			<td><div class="container"><img id="orb" class="item" src="sprites/orb.png" onClick="incCounter(event, 10, &quot;orbCounter&quot;)" oncontextmenu="decCounter(event, 10, &quot;orbCounter&quot;);return false;" title="Sacred Orbs"><div class="overlay" id="orbCounter">0</div></div></td>
-		</tr><tr>
-		</table>
-		<table id="bosses"><tr>
-			<td width=28px height=28px><img id="amphisbaena" class="item" src="sprites/Amphi.png" onClick="toggleItem(event)" title="Amphisbaena"></td>
-			<td width=28px height=28px><img id="sakit" class="item" src="sprites/Sakit.png" onClick="toggleItem(event)" title="Sakit"></td>
-			<td width=28px height=28px><img id="ellmac" class="item" src="sprites/ellmac.png" onClick="toggleItem(event)" title="Ellmac"></td>
-			<td width=28px height=28px><img id="bahamut" class="item" src="sprites/bahamut.png" onClick="toggleItem(event)" title="Bahamut"></td>
-			<td width=28px height=28px><img id="viy" class="item" src="sprites/Viy.png" onClick="toggleItem(event)" title="Viy"></td>
-			<td width=28px height=28px><img id="palenque" class="item" src="sprites/Palenque.png" onClick="toggleItem(event)" title="Palenque"></td>
-			<td width=28px height=28px><img id="baphomet" class="item" src="sprites/baphomet.png" onClick="toggleItem(event)" title="Baphomet"></td>
-			<td width=28px height=28px><img id="tiamat" class="item" src="sprites/tiamat.png" onClick="toggleItem(event)" title="Tiamat"></td>
-	</tr></table>
 	<br>
 	Change BG Color: <input type="color" id="bgcolor" value="#333333" onchange="changeBG()">
 	<br>

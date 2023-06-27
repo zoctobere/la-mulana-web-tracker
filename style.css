@@ -60,7 +60,7 @@ button:active{
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 720px;
+	/* width: 720px; */
 	padding-top: 0px;
 	padding-left: 0px;
 	display: none;
@@ -71,7 +71,7 @@ button:active{
 	text-align: left;
 	top: 20;
 	left: 20;
-	width: 600px;
+	/* width: 600px; */
 	padding-top: 0px;
 	padding-left: 0px;
 	display: none;
@@ -83,7 +83,8 @@ img{
 }
 .map-container{
 	position: relative;
-	max-width: 720px;
+	min-width: 620px;
+	max-width: 1280px;
 	max-height: 480px;
 }
 a{
@@ -136,11 +137,25 @@ a{
 }
 table{
 	position: relative;
-	width: 300px;
+	min-width: 220px;
 	height: 30px;
 	margin-top: 2px;
 	margin-bottom: 2px;
 	border: 1px solid #333333;
+}
+table#layout{
+	min-width: 500px;
+	max-width: 1280px;
+	text-align: left;
+	vertical-align: top;
+}
+table#bosses{
+	min-width: 40px;
+	max-width: 40px;
+	height: 100%;
+}
+th{
+	text-align: left;
 }
 td{
 	width: 32px;
