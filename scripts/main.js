@@ -9,19 +9,7 @@ var lastClick;
 
 function changeBG(){
 	document.body.style.backgroundColor = document.getElementById("bgcolor").value;
-}
-
-function changeText(){
-	document.getElementById("tracker").style.color = document.getElementById("txtcolor").value;
-}
-
-function toggleBorder(){
-	const checked = document.getElementById("trackerborder").checked;
-	if (checked){
-		document.getElementById("tracker").style.border = "2px solid darkred";
-	} else {
-		document.getElementById("tracker").style.border = "2px solid transparent";
-	}
+	document.getElementById("shopDropdown").style.backgroundColor = document.getElementById("bgcolor").value;
 }
 
 function info(){
@@ -46,7 +34,7 @@ function toggleItem(e){
 	if ( id == "isispendant" || "miracle" || "mekuri" ){
 		checkKeyFairy();
 	}
-	if ( id == "dragonbone" || "yagomap" || "yagostr" || "shrinemap" || "amphisbaena" || "sakit" || "ellmac" || "bahamut" || "viy" || "palenque" || "baphomet" || "tiamat"){
+	if ( id == "dragonbone" || "yagomap" || "yagostr" || "shrinemap" || "amphisbaena" || "sakit" || "ellmac" || "bahamut" || "viy" || "palenque" || "baphoment" || "tiamat"){
 		checkShrineChecks();
 	}
 }
