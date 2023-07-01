@@ -21,6 +21,9 @@ button:active{
 	box-shadow: 0 2px #666;
 	transform: translateY(2px);
 }
+button.danger{
+	background-color: #910e02;
+}
 .owmarker{
 	position: absolute;
 	top: 0;
@@ -171,6 +174,7 @@ td{
 	vertical-align: bottom;
 	height: 30px;
 	overflow: hidden;
+	cursor: default;
 }
 
 

@@ -46,7 +46,7 @@ function toggleItem(e){
 	if ( id == "isispendant" || "miracle" || "mekuri" ){
 		checkKeyFairy();
 	}
-	if ( id == "dragonbone" || "yagomap" || "yagostr" || "shrinemap" || "amphisbaena" || "sakit" || "ellmac" || "bahamut" || "viy" || "palenque" || "baphoment" || "tiamat"){
+	if ( id == "dragonbone" || "yagomap" || "yagostr" || "shrinemap" || "amphisbaena" || "sakit" || "ellmac" || "bahamut" || "viy" || "palenque" || "baphomet" || "tiamat"){
 		checkShrineChecks();
 	}
 }
