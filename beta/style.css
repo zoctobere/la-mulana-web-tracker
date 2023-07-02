@@ -69,6 +69,24 @@ img{
 	background-color: lavender;
 	padding: 20px;
 }
+.display-controls {
+	display: grid;
+	align-items: column;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 0.8rem;
+	font-weight: 600;
+	padding: 10px;
+}
+.display-controls>label{
+	display: block;
+	width: 25rem;
+}
+.display-control-row{
+	display: grid;
+	align-items: start;
+	text-align: left;
+	grid-template-columns: 10rem 3rem;
+}
 .tracker {
 	display: grid;
 	align-items: start;
@@ -77,6 +95,9 @@ img{
 	max-width: 500px;
 	min-height: 350px;
 	max-height: 390px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 10px;
 	border: 2px solid darkred;
 }
 .pane {

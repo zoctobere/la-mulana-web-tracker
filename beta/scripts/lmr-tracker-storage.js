@@ -87,6 +87,16 @@ const trackerStorage = {
         this.setItem(key, 'counter', tracked);
         return tracked;
     },
+    getOrInitializePreference: function(key, defaultValue) {
+        const existing = this.getItem(key, 'pref');
+        if (!existing) { this.setItem(key, 'pref', defaultValue); }
+    },
+    setPreference: function(key, value) {
+        this.setItem(key, 'pref', value);
+    },
+    getPreference: function(key, value) {
+        return this.getItem(key, 'pref');
+    },
     reset: function(key, type) {
         const tracked = this.getItem(key, type);
         if (tracked) {

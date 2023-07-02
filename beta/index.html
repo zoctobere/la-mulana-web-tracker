@@ -144,11 +144,17 @@
 	<br/>
 	<button class="danger" onClick="resetTracker(event)" type="button">Reset tracked items</button>
 	<br/>
-	Change BG Color: <input type="color" id="bgcolor" value="#333333" onchange="changeBG()">
-	<br/>
-	Change Text Color: <input type="color" id="txtcolor" value="#333333" onchange="changeText()">
-	<br/>
-	Display Tracker Border: <input type="checkbox" id="trackerborder" checked onchange="toggleBorder()">
+	<div class="display-controls" id="controls-pane">
+		<div class="display-control-row">
+			<label for="bgcolor">Change BG Color:</label><input type="color" id="bgcolor" value="#333333" onchange="changeBG()">
+		</div>
+		<div class="display-control-row">
+			<label for="txtcolor">Change Text Color:</label><input type="color" id="txtcolor" value="#333333" onchange="changeText()">
+		</div>
+		<div class="display-control-row">
+			<label for="trackerborder">Display Tracker Border:</label><input type="checkbox" id="trackerborder" checked onchange="toggleBorder()">
+		</div>
+	</div>
 	<br/>
 	<button onClick="info()" type="button">info</button>
 	<div id="info" class="info">

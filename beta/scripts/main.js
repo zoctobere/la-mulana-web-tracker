@@ -1,4 +1,6 @@
 window.addEventListener('load', (_e) => {
+    initializePreferencesFromLocalStorage();
+    updatePreferenceDisplays();
     initializeTrackerChecksFromLocalstorage();
     updateAllTrackerCheckDisplays(trackerChecks);
     checkKeyFairy();
@@ -71,6 +73,24 @@ function resetTracker(e){
         checkKeyFairy();
         checkShrineChecks();
     }
+}
+
+function changeBG() {
+	const colorHex = document.getElementById("bgcolor").value
+	trackerStorage.setPreference('bgcolor', colorHex);
+	updateBGColorDisplay();
+	updateTrackerBorderDisplay();
+}
+
+function changeText() {
+	trackerStorage.setPreference('textcolor', document.getElementById("txtcolor").value);
+	updateTextColorDisplay();
+}
+
+function toggleBorder() {
+	const checked = document.getElementById("trackerborder").checked;
+	trackerStorage.setPreference('showborder', checked);
+	updateTrackerBorderDisplay();
 }
 
 function checkKeyFairy(){
