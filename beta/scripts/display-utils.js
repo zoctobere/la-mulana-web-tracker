@@ -23,8 +23,10 @@ function updateTrackerBorderDisplay(){
 	if (document.getElementById('trackerborder').checked != showBorder) {
 		document.getElementById('trackerborder').checked = showBorder;
 	}
+	console.log('updating border', showBorder);
 	if (showBorder){
-		document.getElementById("tracker").style.border = `2px solid ${invertHSLA(rgbToHsl(bgcolor))}`;
+		const hslStr = toHslCSS(invertHSLA(rgbToHsl(bgcolor)));
+		document.getElementById("tracker").style.border = `2px solid ${hslStr}`;
 	} else {
 		document.getElementById("tracker").style.border = "2px solid transparent";
 	}
@@ -129,6 +131,11 @@ function rgbToHsl(rgbHex) {
 function invertHSLA(hsla) {
 	const [h, s, l, a] = hsla;
 	return [(h+180) % 360, s, 100-l, a];
+}
+
+function toHslCSS(hsla) {
+	const [h, s, l, a] = hsla;
+	return `hsl(${h}deg,${s}%,${l}%,${a})`
 }
 
 function testColorConversionInversion() {
